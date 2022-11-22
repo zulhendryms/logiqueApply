@@ -24,4 +24,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::prefix('v1/users')->middleware()->group(function () {
     Route::get('/list', 'UserController@index');
+    Route::post('/store', 'UserController@store');
+    Route::get('/show', 'UserController@show');
+    Route::put('/update', 'UserController@update');
 });
