@@ -17,10 +17,17 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            // $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('address');
+            $table->string('photos');
+            $table->string('creditcard_type');
+            $table->string('creditcard_number');
+            $table->string('creditcard_name');
+            $table->string('creditcard_expired');
+            $table->string('creditcard_cvv');
+            // $table->rememberToken();
+            // $table->timestamps();
         });
     }
 
